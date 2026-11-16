@@ -1,5 +1,10 @@
 # ECSE412-AdaptiveFilterProject
 ---
+## Opening/Running the notebook with Conda
+
+`conda env create -f environment.yml --prune`
+
+This should download all the requirements to your conda environement and the notebook should run now.
 
 ## TODO
   
@@ -8,7 +13,6 @@ Ryan:
 
 Arda:
 - Read resources (LMS paper, lecture slides)
-- Create python files, `venv` and `requirements.txt`
 - Create report draft
 - Read Random signals (2.10)
 
@@ -17,8 +21,12 @@ Arda:
 - Init weights **h[k,n]**. Figure out what value of M (number of weights) we want to use
   - May use a bias variable as h[0,n] which would be initialized as a 1.
   - In Lec slides, says to init all values as 0, but we can play around with random initialization to seek better convergence
+  - The algorithm only uses the current weights, so keep one vector of length M+1 and update it in place. 
 - Init i_hat. Start with 0 because we have no prior knowledge of error.
-- Init mu. Start with 1, but we will sweep some range (perhaps [-10, 10])
+- Init mu. Start with 1, but we will sweep some range (perhaps [-10, 10]) **Doesn't work**
+  - No negative values: μ must be greater than 0. 
+  - A negative μ climbs the error surface instead of descending it, it divergs. 
+  - Upper limit: the practical bound is μ < 2 / ((M+1)·σ_x²). With σ_s² = 1 and A = 1, σ_x² = 1.5. 
 - Init n_D. We must figure out a good time step for this. Since `s[n]` is random noise, a delay of 1 time step is usually sufficient, but if it is any different form of noise, it will need a larger time step.
 - Create loop
   - produce `e[n] = x[n] - i_hat[n]` 

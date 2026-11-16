@@ -1,0 +1,22 @@
+name: Project
+channels:
+  - defaults
+dependencies:
+  - python=3.14.10
+  - pip
+  - ipykernel
+  - scipy
+  - matplotlib
+  - conda-content-trust
+  - setuptools
+  - anaconda-auth[version='>=0.15.1']
+  - conda=26.10.0
+  - python.app
+  - conda-anaconda-telemetry[version='>=0.3.0']
+  - anaconda-channel-guide
+  - anaconda-anon-usage
+  - wheel
+  - conda-anaconda-tos[version='>=0.2.2']
+  - conda-libmamba-solver
+  - menuinst
+  - numpy
