@@ -14,11 +14,12 @@
 
 After these steps you should see the figures in the report and the implementation of the algorithms.
 
-After being done, you can easily delete everything by `rm -rf .venv`.
+After being done, you can easily leave the python venv via `deactivate` and delete everything by `rm -rf .venv`.
 
 ## Project Outline
 
 This project implements the following ALE filter with LMS and RMs algorithms:
+
 ```
 x[n] ──┬──────────────────────────────(-)──► e[n] ≈ s[n]   (the output)
        │                               ▲
