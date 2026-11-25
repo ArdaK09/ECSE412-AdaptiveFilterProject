@@ -10,7 +10,7 @@
     - Mac: `source .venv/bin/activate`
 3) Download the required packages for the project `pip3  install -r requirements.txt`.
 4) The above command should've installed jupyter which will run the notebook. To run the web interface: `jupyter notebook`
-5) Navigate to your browser and  select the file of interest: `LMS.ipynb` or `RMS.ipynb`, then from the menu bar select *Run All*.
+5) Navigate to your browser and select the file of interest: `LMS.ipynb` or `RLS.ipynb`, then from the menu bar select *Run All*.
 
 After these steps you should see the figures in the report and the implementation of the algorithms.
 
@@ -18,7 +18,7 @@ After being done, you can easily leave the python venv via `deactivate` and dele
 
 ## Project Outline
 
-This project implements the following ALE filter with LMS and RMs algorithms:
+This project implements the following ALE filter with LMS and RLS algorithms:
 
 ```
 x[n] ──┬──────────────────────────────(-)──► e[n] ≈ s[n]   (the output)
